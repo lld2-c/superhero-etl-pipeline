@@ -1,9 +1,9 @@
+from sqlalchemy import create_engine
 from config import conn_string
 from config import out_conn_string
 import module
 import pandas as pd
 from datetime import datetime
-from sqlalchemy import create_engine
 
 # set up input database conn
 db_instance = module.pgconnect()
