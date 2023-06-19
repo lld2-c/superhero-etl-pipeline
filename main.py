@@ -38,10 +38,5 @@ if __name__ == '__main__':
 
 # [] Design a data quality check and monitoring system
 
-logging.basicConfig(filename='logs/etl.log',
-                    filemode='a',
-                    format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s',
-                    datefmt='%H:%M:%S',
-                    level=logging.DEBUG)
-
+module.basic_logging_configure()
 logging.info("Successfully completed etl")
