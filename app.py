@@ -1,22 +1,23 @@
-from src import extract, transform, load
+import src
 import logging 
 import module
 from config.configurations import connection_string
+from flask import Flask
 
 def main():
     # Create database
     module.create_db_ifnot_exist(connection_string)
 
     # Extract data
-    extracted_data = extract.extract_data()
+    extracted_data = src.extract_data()
 
     # Transform data
-    transformed_data = transform.transform_data(extracted_data)
+    transformed_data = src.transform_data(extracted_data)
 
     # Load data
-    load.load_data(transformed_data)
+    src.load_data(transformed_data)
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
 
 
