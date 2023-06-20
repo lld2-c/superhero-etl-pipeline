@@ -11,9 +11,14 @@ blocks:
         - name: Generate docker image
           commands:
             - checkout
+  - name: Unit test
+    task:
+      jobs:
+        - name: Test Extract
+          commands:
+            - python -m unittest tests.test_extract
 after_pipeline:
   task:
     jobs:
-      - name: Unit Test
-        commands:
-          - python -m unittest -v tests.test_extract
+      - name: ''
+        commands: []
