@@ -16,4 +16,5 @@ blocks:
       jobs:
         - name: Test Extract
           commands:
+            - checkout
             - python -m unittest tests.test_extract
