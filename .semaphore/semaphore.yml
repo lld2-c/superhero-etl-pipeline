@@ -5,16 +5,37 @@ agent:
     type: e1-standard-2
     os_image: ubuntu2004
 blocks:
-  - name: dockerise
+  - name: Install Dependencies"
     task:
+      prologue:
+        commands:
+          # Set the python version.
+          # See https://docs.semaphoreci.com/article/132-sem-service-managing-databases-and-services-on-linux
+          # Install Linux dependencies.
+          - sudo apt-get update && sudo apt-get install -y python3-dev && sudo apt-get install default-libmysqlclient-dev
       jobs:
-        - name: Generate docker image
+        - name: pip
           commands:
             - checkout
+            - cache restore
+            # Install python dependencies.
+            # If not found in the cache, pip will download them.
+            - pip download --cache-dir .pip_cache -r requirements.txt
+            # Persist downloaded packages for future jobs.
+            - cache store
   - name: Unit test
     task:
+      prologue:
+        commands:
+          # Start a MySQL database. On Semaphore, databases run in the same
+          # environment as your code.
+          # See https://docs.semaphoreci.com/article/32-ubuntu-1804-image#databases-and-services
+          # Also https://docs.semaphoreci.com/article/54-toolbox-reference#sem-service
+          - checkout
+          - cache restore
+          - pip install -r requirements.txt --cache-dir .pip_cache
+      # Two parallel test jobs are executed.
       jobs:
         - name: Test Extract
           commands:
-            - checkout
             - python -m unittest tests.test_extract
