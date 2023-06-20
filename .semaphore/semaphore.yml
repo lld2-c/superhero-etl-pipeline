@@ -16,4 +16,4 @@ after_pipeline:
     jobs:
       - name: Unit Test
         commands:
-          - python -m unittest -v tests/test_extract.py
+          - python -m unittest -v tests.test_extract
