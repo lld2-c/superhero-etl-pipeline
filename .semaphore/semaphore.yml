@@ -17,8 +17,3 @@ blocks:
         - name: Test Extract
           commands:
             - python -m unittest tests.test_extract
-after_pipeline:
-  task:
-    jobs:
-      - name: ''
-        commands: []
