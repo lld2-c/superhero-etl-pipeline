@@ -14,7 +14,6 @@ def load_data(transformed_data):
     o_characters, o_charactersToComics, o_charactersToPowers, o_character_stats, o_comics, o_powers, o_character_wiki = transformed_data
     characters_o = o_characters.apply(lambda x: x.astype('string')).head().to_json(orient = 'records')
     obj = json.loads(characters_o)
-    # [-] pipe it to SQL database (19/jun)
     engine = create_engine(connection_string)
     Session = sessionmaker(bind=engine)
     session = Session()

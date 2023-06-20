@@ -1,13 +1,8 @@
 import src
 import logging 
 import module
-from config.configurations import connection_string
-from flask import Flask
 
 def main():
-    # Create database
-    module.create_db_ifnot_exist(connection_string)
-
     # Extract data
     extracted_data = src.extract_data()
 
@@ -23,7 +18,7 @@ if __name__ == "__main__":
 
 # [x] load into SQL database hosted on Docker
 
-# [] generate docker image
+# [x] generate docker image
 
 # [] deploy docker image to Kubernetes cluster
 

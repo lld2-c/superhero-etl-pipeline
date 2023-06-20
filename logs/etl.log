@@ -1,5 +1,1 @@
-19:31:55,78 root INFO Database ready to use. Use alembic to migrate schema next
-19:50:29,618 root INFO Database ready to use. Use alembic to migrate schema next
-19:55:13,412 root INFO test
-2023-06-19,19:55:32,674 root INFO test
-2023-06-19 19:57:08 root INFO test
+2023-06-20 14:23:55 root INFO Successfully completed etl

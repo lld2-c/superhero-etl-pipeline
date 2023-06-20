@@ -11,6 +11,6 @@ def extract_data():
     comics = pd.read_csv(zf.open('comics.csv'))
     marvel_characters_info = pd.read_csv(zf.open('marvel_characters_info.csv'))
     superheroes_power_matrix = pd.read_csv(zf.open('superheroes_power_matrix.csv'))
-    # marvel_dc_characters.csv corrupted file, same purpose as marvel_dc_characters_ms, therefore ignored
+    # marvel_dc_characters.csv is a corrupted file, same purpose as marvel_dc_characters_ms, therefore ignored
     marvel_dc_characters_ms = pd.read_excel(zf.open('marvel_dc_characters.xlsx'))
     return (characters, charactersToComics, characters_stats, comics, marvel_characters_info, superheroes_power_matrix, marvel_dc_characters_ms)
