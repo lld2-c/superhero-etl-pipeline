@@ -1,1 +1,30 @@
-2023-06-20 14:23:55 root INFO Successfully completed etl
+Container data-warehouse-db  Running
+INFO  [alembic.runtime.migration] Context impl PostgresqlImpl.
+INFO  [alembic.runtime.migration] Will assume transactional DDL.
+INFO  [alembic.runtime.migration] Running upgrade  -> 706ca6caf601, test
+
+2023-06-25 10:40:44 root INFO Extract unit test started..
+2023-06-25 10:40:44 root INFO Extracting started..
+2023-06-25 10:40:44 root INFO Extract completed!
+2023-06-25 10:40:44 root INFO Extract unit test completed
+2023-06-25 10:40:52 root INFO Transform unit test started..
+2023-06-25 10:40:52 root INFO Start transforming..
+2023-06-25 10:40:52 root INFO Transform completed!
+2023-06-25 10:40:52 root INFO Transform unit test completed
+2023-06-25 10:40:57 root INFO Load unit test started..
+2023-06-25 10:40:57 root INFO Start loading..
+2023-06-25 10:40:57 root INFO Load completed!
+2023-06-25 10:40:57 root INFO Transform unit test completed
+2023-06-25 10:48:07 root INFO Load unit test started..
+2023-06-25 10:48:07 root INFO Start loading..
+2023-06-25 10:48:07 root INFO Load completed!
+2023-06-25 10:48:07 root INFO Transform unit test completed
+
+2023-06-25 10:53:36 root INFO Database ready to use. 
+2023-06-25 10:53:36 root ERROR extract_data() missing 1 required positional argument: 'testOrProd'
+2023-06-25 10:55:55 root INFO Database ready to use. 
+2023-06-25 10:55:55 root INFO Extracting started..
+2023-06-25 10:55:59 root INFO Extract completed!
+2023-06-25 10:55:59 root INFO Start transforming..
+2023-06-25 10:55:59 root INFO Transform completed!
+2023-06-25 10:55:59 root INFO Start loading..

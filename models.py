@@ -30,8 +30,6 @@ class Character(Base):
     ingested = Column(DateTime, default=datetime.now)
     last_updated = Column(DateTime, onupdate=datetime.now)
 
-    def __repr__(self):
-        return '<Character: {}>'.format(self.character_id)
 
 class Power(Base):
     __tablename__ = 'powers'
@@ -50,18 +48,18 @@ class Comic(Base):
 class CharacterWiki(Base):
     __tablename__ = 'characters_wiki'
     character_wiki_id = Column(String, primary_key=True)
-    name = Column(String)
-    eye_color = Column(String)
+    gender = Column(String)
+    eyecolor = Column(String)
     race = Column(String)
-    hair_color = Column(String)
+    haircolor = Column(String)
     publisher = Column(String)
-    skin_color = Column(String)
+    skincolor = Column(String)
     height = Column(Float)
     weight = Column(Float)
     identity = Column(String)
     status = Column(String)
     appearances = Column(Integer)
-    first_appearance = Column(String)
+    first_appearance = Column(DateTime)
     year = Column(Integer)
     universe = Column(String)
     character_id = Column(String, ForeignKey('characters.character_id'))
@@ -71,7 +69,6 @@ class CharacterWiki(Base):
 class CharacterStat(Base):
     __tablename__ = 'character_stats'
     character_stat_id = Column(String, primary_key=True)
-    name = Column(String)
     alignment = Column(String)
     intelligence = Column(Integer)
     strength = Column(Integer)

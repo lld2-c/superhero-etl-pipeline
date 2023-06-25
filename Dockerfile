@@ -1,12 +1,11 @@
 FROM python:3.9 
 # Or any preferred Python version.
 
-ADD ./requirements.txt .
-RUN pip install -r ./requirements.txt
 ADD . .
+RUN pip install -r ./requirements.txt
 # change path 
-RUN export KAGGLE_CONFIG_DIR=./config 
+COPY ./config/kaggle.json /root/.kaggle/kaggle.json
+RUN chmod 600 /root/.kaggle/kaggle.json
 RUN kaggle datasets download dannielr/marvel-superheroes/v/3 -p ./data --force
-RUN python setup.py
-RUN alembic upgrade heads > logs/etl.log
-CMD ["python", "app.py"] 
+# RUN alembic upgrade heads >> logs/etl.log
+ENTRYPOINT python app.py

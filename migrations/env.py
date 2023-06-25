@@ -9,7 +9,8 @@ from alembic import context
 # access to the values within the .ini file in use.
 config = context.config
 
-from config.configurations import connection_string
+import module
+connection_string = module.generate_conn_str()
 section = config.config_ini_section
 config.set_section_option(section, "CONNECTION_STRING", connection_string)
 # Interpret the config file for Python logging.

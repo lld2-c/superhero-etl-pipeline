@@ -1,8 +1,8 @@
-"""Create Character model
+"""test
 
-Revision ID: 4909bf282e33
+Revision ID: 706ca6caf601
 Revises: 
-Create Date: 2023-06-19 15:36:42.199876
+Create Date: 2023-06-24 13:48:28.477670
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '4909bf282e33'
+revision = '706ca6caf601'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -53,7 +53,6 @@ def upgrade() -> None:
     )
     op.create_table('character_stats',
     sa.Column('character_stat_id', sa.String(), nullable=False),
-    sa.Column('name', sa.String(), nullable=True),
     sa.Column('alignment', sa.String(), nullable=True),
     sa.Column('intelligence', sa.Integer(), nullable=True),
     sa.Column('strength', sa.Integer(), nullable=True),
@@ -68,18 +67,18 @@ def upgrade() -> None:
     )
     op.create_table('characters_wiki',
     sa.Column('character_wiki_id', sa.String(), nullable=False),
-    sa.Column('name', sa.String(), nullable=True),
-    sa.Column('eye_color', sa.String(), nullable=True),
+    sa.Column('gender', sa.String(), nullable=True),
+    sa.Column('eyecolor', sa.String(), nullable=True),
     sa.Column('race', sa.String(), nullable=True),
-    sa.Column('hair_color', sa.String(), nullable=True),
+    sa.Column('haircolor', sa.String(), nullable=True),
     sa.Column('publisher', sa.String(), nullable=True),
-    sa.Column('skin_color', sa.String(), nullable=True),
+    sa.Column('skincolor', sa.String(), nullable=True),
     sa.Column('height', sa.Float(), nullable=True),
     sa.Column('weight', sa.Float(), nullable=True),
     sa.Column('identity', sa.String(), nullable=True),
     sa.Column('status', sa.String(), nullable=True),
     sa.Column('appearances', sa.Integer(), nullable=True),
-    sa.Column('first_appearance', sa.String(), nullable=True),
+    sa.Column('first_appearance', sa.DateTime(), nullable=True),
     sa.Column('year', sa.Integer(), nullable=True),
     sa.Column('universe', sa.String(), nullable=True),
     sa.Column('character_id', sa.String(), nullable=True),

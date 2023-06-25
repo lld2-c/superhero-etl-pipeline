@@ -39,3 +39,9 @@ blocks:
         - name: Test Extract
           commands:
             - python -m unittest tests.test_extract
+        - name: Test Transform
+          commands:
+            - python -m unittest tests.test_transform
+        - name: Test Load
+          commands:
+            - python -m unittest tests.test_load

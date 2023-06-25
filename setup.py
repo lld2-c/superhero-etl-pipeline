@@ -1,4 +1,0 @@
-import module
-from config.configurations import connection_string
-
-module.create_db_ifnot_exist(connection_string)

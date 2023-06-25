@@ -1,23 +1,17 @@
-# unit test if file read proper
-# import pandas as pd
-
-# assert not characters.empty, "DataFrame is empty"
-
-# o_characters['character_id'].duplicated().any()
-# if has_duplicates:
-#     print("The 'character_id' column has duplicates.")
-# else:
-#     print("The 'character_id' column has no duplicates.")
-
-
 import unittest
 import src
+import module
+import logging 
 
 
-class ExtractTestCase(unittest.TestCase):
+class extractTestCase(unittest.TestCase):
     def test_extract(self):        
-        extracted_data = src.extract_data()
+        module.generateTestData()
+        module.basic_logging_configure()
+        logging.info('Extract unit test started..')
+        extracted_data = src.extract_data('test')
         self.assertIsNotNone(extracted_data)
+        logging.getLogger().info("Extract unit test completed")
 
 if __name__ == '__main__':
     unittest.main()
