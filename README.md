@@ -35,17 +35,22 @@ ready to ingest data<br>
 $ python app.py
 ```
 
+Docker image on docker hub: https://hub.docker.com/r/lld2/superhero-etl-pipeline
+<br/><br/>
+
 ## 2. Sample use case
 
 ![Sample Use Case](data/sample-use-case.png)<br>
 Live dashboard link (private invitation only):
 https://8468b23a.eu5a.app.preset.io/superset/dashboard/p/xlO9pgzemow/
+<br/><br/>
 
 ## 3. Data quality check and monitoring system
 
 ![Quality Control](data/quality-control.png)
 Live dashboard link (private invitation only):
 https://8468b23a.eu5a.app.preset.io/superset/dashboard/p/xlO9pgzemow/
+<br/><br/>
 
 ## 4. Future improvement points
 

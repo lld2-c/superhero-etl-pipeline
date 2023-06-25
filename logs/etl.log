@@ -20,10 +20,190 @@ INFO  [alembic.runtime.migration] Running upgrade  -> 706ca6caf601, test
 2023-06-25 10:48:07 root INFO Load completed!
 2023-06-25 10:48:07 root INFO Transform unit test completed
 
-
 2023-06-25 11:47:40 root INFO Database ready to use.
 2023-06-25 11:47:40 root INFO Extracting started..
 2023-06-25 11:47:45 root INFO Extract completed!
 2023-06-25 11:47:45 root INFO Start transforming..
 2023-06-25 11:47:46 root INFO Transform completed!
 2023-06-25 11:47:46 root INFO Start loading..
+2023-06-25 12:01:03 root INFO Load characters, powers and character_power_association completed!
+2023-06-25 12:47:22 root INFO Load comics and character_comic_association completed!
+2023-06-25 12:48:54 root INFO Load character_stats completed!
+2023-06-25 12:51:22 root INFO Load characters_wiki completed!#1 [internal] load build definition from Dockerfile
+#1 sha256:0342e06c3bc0f2da27f9ceceb934db852f7d529d49b1ab45f6bf6da03a18f0a4
+#1 transferring dockerfile: 37B done
+#1 DONE 0.0s
+
+#2 [internal] load .dockerignore
+#2 sha256:12b5f82ab6ea4c5880a43816c2e1976e0b58b75da435e5c623e433e3959f23b9
+#2 transferring context: 2B done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/python:3.9
+#3 sha256:d228fdfd3a95efc08c43e603597b1918d6ab6551f4f9a0cd80ec45ea028fec5a
+#3 DONE 0.5s
+
+#5 [internal] load build context
+#5 sha256:6e3edbdf3e548fb2e39c5687cb667c6e881df5a2d2cc87c38e6730aeb7c94f35
+#5 transferring context: 37.38kB 0.0s done
+#5 DONE 0.0s
+
+#4 [1/6] FROM docker.io/library/python:3.9@sha256:98f018a1afd67f2e17a4abd5bfe09b998734ba7c1ee54780e7ed216f8b8095c3
+#4 sha256:cc1fc1e15a23d2ce83e11ba99d3d0e2a8729f3ae23eac18d172a3b07a9d2cd15
+#4 CACHED
+
+#6 [2/6] ADD . .
+#6 sha256:6285d014efc12110453b52d4dc816a7c8cc725fd23a2b4b967add3832e84d936
+#6 DONE 0.2s
+
+#7 [3/6] RUN pip install -r ./requirements.txt
+#7 sha256:807d63f51c136bdc53926a067c617a2b55e4ea3177abba6258ebd18a3c66484c
+#7 1.250 Collecting alembic==1.11.1
+#7 1.304   Downloading alembic-1.11.1-py3-none-any.whl (224 kB)
+#7 1.334      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 224.5/224.5 kB 7.8 MB/s eta 0:00:00
+#7 1.521 Collecting numpy==1.21.3
+#7 1.535   Downloading numpy-1.21.3-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (13.0 MB)
+#7 2.293      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.0/13.0 MB 17.3 MB/s eta 0:00:00
+#7 2.420 Collecting pandas==1.3.3
+#7 2.430   Downloading pandas-1.3.3-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (10.9 MB)
+#7 3.059      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.9/10.9 MB 17.2 MB/s eta 0:00:00
+#7 3.339 Collecting SQLAlchemy==1.4.32
+#7 3.356   Downloading SQLAlchemy-1.4.32-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (1.6 MB)
+#7 3.461      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 15.4 MB/s eta 0:00:00
+#7 3.503 Collecting SQLAlchemy_Utils==0.41.1
+#7 3.510   Downloading SQLAlchemy_Utils-0.41.1-py3-none-any.whl (92 kB)
+#7 3.518      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 92.6/92.6 kB 13.4 MB/s eta 0:00:00
+#7 3.539 Collecting kaggle==1.5.13
+#7 3.550   Downloading kaggle-1.5.13.tar.gz (63 kB)
+#7 3.559      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.3/63.3 kB 8.5 MB/s eta 0:00:00
+#7 3.568   Preparing metadata (setup.py): started
+#7 3.758   Preparing metadata (setup.py): finished with status 'done'
+#7 3.827 Collecting psycopg2_binary==2.9.4
+#7 3.838   Downloading psycopg2_binary-2.9.4-cp39-cp39-manylinux_2_24_aarch64.whl (3.4 MB)
+#7 4.027      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.4/3.4 MB 18.0 MB/s eta 0:00:00
+#7 4.077 Collecting openpyxl==3.1.2
+#7 4.084   Downloading openpyxl-3.1.2-py2.py3-none-any.whl (249 kB)
+#7 4.102      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 250.0/250.0 kB 15.6 MB/s eta 0:00:00
+#7 4.129 Collecting python-dotenv==1.0.0
+#7 4.139   Downloading python_dotenv-1.0.0-py3-none-any.whl (19 kB)
+#7 4.179 Collecting typing-extensions>=4
+#7 4.186   Downloading typing_extensions-4.6.3-py3-none-any.whl (31 kB)
+#7 4.227 Collecting Mako
+#7 4.237   Downloading Mako-1.2.4-py3-none-any.whl (78 kB)
+#7 4.243      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.7/78.7 kB 14.4 MB/s eta 0:00:00
+#7 4.296 Collecting pytz>=2017.3
+#7 4.308   Downloading pytz-2023.3-py2.py3-none-any.whl (502 kB)
+#7 4.335      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 502.3/502.3 kB 19.3 MB/s eta 0:00:00
+#7 4.359 Collecting python-dateutil>=2.7.3
+#7 4.367   Downloading python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+#7 4.378      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 247.7/247.7 kB 23.6 MB/s eta 0:00:00
+#7 4.518 Collecting greenlet!=0.4.17
+#7 4.530   Downloading greenlet-2.0.2-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (607 kB)
+#7 4.564      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 607.6/607.6 kB 18.9 MB/s eta 0:00:00
+#7 4.615 Collecting six>=1.10
+#7 4.623   Downloading six-1.16.0-py2.py3-none-any.whl (11 kB)
+#7 4.652 Collecting certifi
+#7 4.660   Downloading certifi-2023.5.7-py3-none-any.whl (156 kB)
+#7 4.670      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 157.0/157.0 kB 18.0 MB/s eta 0:00:00
+#7 4.701 Collecting requests
+#7 4.713   Downloading requests-2.31.0-py3-none-any.whl (62 kB)
+#7 4.719      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.6/62.6 kB 18.0 MB/s eta 0:00:00
+#7 4.764 Collecting tqdm
+#7 4.772   Downloading tqdm-4.65.0-py3-none-any.whl (77 kB)
+#7 4.776      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 77.1/77.1 kB 28.5 MB/s eta 0:00:00
+#7 4.802 Collecting python-slugify
+#7 4.814   Downloading python_slugify-8.0.1-py2.py3-none-any.whl (9.7 kB)
+#7 4.878 Collecting urllib3
+#7 4.885   Downloading urllib3-2.0.3-py3-none-any.whl (123 kB)
+#7 4.893      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 123.6/123.6 kB 19.8 MB/s eta 0:00:00
+#7 4.914 Collecting et-xmlfile
+#7 4.920   Downloading et_xmlfile-1.1.0-py3-none-any.whl (4.7 kB)
+#7 5.000 Collecting MarkupSafe>=0.9.2
+#7 5.013   Downloading MarkupSafe-2.1.3-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (26 kB)
+#7 5.041 Collecting text-unidecode>=1.3
+#7 5.049   Downloading text_unidecode-1.3-py2.py3-none-any.whl (78 kB)
+#7 5.057      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.2/78.2 kB 12.4 MB/s eta 0:00:00
+#7 5.147 Collecting charset-normalizer<4,>=2
+#7 5.157   Downloading charset_normalizer-3.1.0-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl (196 kB)
+#7 5.168      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 196.4/196.4 kB 18.6 MB/s eta 0:00:00
+#7 5.190 Collecting idna<4,>=2.5
+#7 5.197   Downloading idna-3.4-py3-none-any.whl (61 kB)
+#7 5.202      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.5/61.5 kB 14.0 MB/s eta 0:00:00
+#7 5.224 Building wheels for collected packages: kaggle
+#7 5.225   Building wheel for kaggle (setup.py): started
+#7 5.440   Building wheel for kaggle (setup.py): finished with status 'done'
+#7 5.440   Created wheel for kaggle: filename=kaggle-1.5.13-py3-none-any.whl size=77734 sha256=1bb918477b4a1d6653a08563f4600e0304c9ec114e0b8be6ea4f23889149be48
+#7 5.440   Stored in directory: /root/.cache/pip/wheels/9c/45/15/6d6d116cd2539fb8f450d64b0aee4a480e5366bb11b42ac763
+#7 5.442 Successfully built kaggle
+#7 5.544 Installing collected packages: text-unidecode, pytz, urllib3, typing-extensions, tqdm, six, python-slugify, python-dotenv, psycopg2_binary, numpy, MarkupSafe, idna, greenlet, et-xmlfile, charset-normalizer, certifi, SQLAlchemy, requests, python-dateutil, openpyxl, Mako, SQLAlchemy_Utils, pandas, kaggle, alembic
+#7 9.845 Successfully installed Mako-1.2.4 MarkupSafe-2.1.3 SQLAlchemy-1.4.32 SQLAlchemy_Utils-0.41.1 alembic-1.11.1 certifi-2023.5.7 charset-normalizer-3.1.0 et-xmlfile-1.1.0 greenlet-2.0.2 idna-3.4 kaggle-1.5.13 numpy-1.21.3 openpyxl-3.1.2 pandas-1.3.3 psycopg2_binary-2.9.4 python-dateutil-2.8.2 python-dotenv-1.0.0 python-slugify-8.0.1 pytz-2023.3 requests-2.31.0 six-1.16.0 text-unidecode-1.3 tqdm-4.65.0 typing-extensions-4.6.3 urllib3-2.0.3
+#7 9.845 WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+#7 9.928 
+#7 9.928 [notice] A new release of pip is available: 23.0.1 -> 23.1.2
+#7 9.928 [notice] To update, run: pip install --upgrade pip
+#7 DONE 10.3s
+
+#8 [4/6] COPY ./config/kaggle.json /root/.kaggle/kaggle.json
+#8 sha256:469bd685c5bf05d27e89206e5bf631765bb5c232de9c40274cf8079c0523a8aa
+#8 DONE 0.0s
+
+#9 [5/6] RUN chmod 600 /root/.kaggle/kaggle.json
+#9 sha256:5a5624fbfd3abeb5b4851a68adbd1b263ace27d46217688f7936ab8f04cdc1c7
+#9 DONE 0.1s
+
+#10 [6/6] RUN kaggle datasets download dannielr/marvel-superheroes/v/3 -p ./data --force
+#10 sha256:4ae119e16fae7042da9a47f0ef18225c3e6a47b550b6598fb51f98de027d6a2f
+#10 1.236 Downloading marvel-superheroes.zip to ./data
+#10 1.237 
+  0%|          | 0.00/7.66M [00:00<?, ?B/s]
+ 13%|█▎        | 1.00M/7.66M [00:00<00:03, 2.16MB/s]
+ 39%|███▉      | 3.00M/7.66M [00:00<00:00, 6.06MB/s]
+ 65%|██████▌   | 5.00M/7.66M [00:00<00:00, 9.31MB/s]
+ 91%|█████████▏| 7.00M/7.66M [00:00<00:00, 11.8MB/s]
+100%|██████████| 7.66M/7.66M [00:00<00:00, 9.18MB/s]
+#10 2.112 
+#10 DONE 2.2s
+
+#11 exporting to image
+#11 sha256:e8c613e07b0b7ff33893b694f7759a10d42e180f2b4dc349fb57dc6b71dcab00
+#11 exporting layers
+#11 exporting layers 0.5s done
+#11 writing image sha256:0560de873b48a67fb9cd86b2f4a0dc51db3946d98b0354170a9e06d94cf6467e done
+#11 naming to docker.io/lld2/superhero-etl-pipeline:1.3 done
+#11 DONE 0.5s
+The push refers to repository [docker.io/lld2/superhero-etl-pipeline]
+07b464c41606: Preparing
+e7ab5e10ee8b: Preparing
+b0cab8c1acc8: Preparing
+4eb0ecfd9b83: Preparing
+9b67e4f1a993: Preparing
+39a878007be7: Preparing
+4549e6268e9e: Preparing
+7112e80a717d: Preparing
+2ccda3709a67: Preparing
+bebb780c89cf: Preparing
+611bfb08f71c: Preparing
+0008bb42e2e6: Preparing
+b89248fb99be: Preparing
+39a878007be7: Waiting
+4549e6268e9e: Waiting
+7112e80a717d: Waiting
+2ccda3709a67: Waiting
+bebb780c89cf: Waiting
+611bfb08f71c: Waiting
+0008bb42e2e6: Waiting
+b89248fb99be: Waiting
+b0cab8c1acc8: Pushed
+e7ab5e10ee8b: Pushed
+39a878007be7: Layer already exists
+4549e6268e9e: Layer already exists
+7112e80a717d: Layer already exists
+2ccda3709a67: Layer already exists
+611bfb08f71c: Layer already exists
+bebb780c89cf: Layer already exists
+0008bb42e2e6: Layer already exists
+b89248fb99be: Layer already exists
+9b67e4f1a993: Pushed
+07b464c41606: Pushed
+4eb0ecfd9b83: Pushed
+1.3: digest: sha256:8c1e1da8e30d9446c0fab544b85ce4e6521ca2a437bfe8f2401e0360fc031044 size: 3056
