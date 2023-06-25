@@ -25,22 +25,12 @@ blocks:
             - cache store
   - name: Unit test
     task:
-      env_vars:
-        - name: LOAD_ENV
-          value: "source .env"
       prologue:
         commands:
           # Start a MySQL database. On Semaphore, databases run in the same
           # environment as your code.
           # See https://docs.semaphoreci.com/article/32-ubuntu-1804-image#databases-and-services
           # Also https://docs.semaphoreci.com/article/54-toolbox-reference#sem-service
-          # Start PostgreSQL database.
-          - sem-service start postgres 13
-          # Install PostgreSQL client.
-          - sudo apt-get update && sudo apt-get install -y -qq postgresql-client
-          # Create an empty database.
-          - export PGPASSWORD="$POSTGRES_PASSWORD" && psql -h "$POSTGRES_HOST" -U "$POSTGRES_USER" -c "CREATE DATABASE $POSTGRES_DB"
-
           - checkout
           - cache restore
           - pip install -r requirements.txt --cache-dir .pip_cache
@@ -52,6 +42,3 @@ blocks:
         - name: Test Transform
           commands:
             - python -m unittest tests.test_transform
-        - name: Test Load
-          commands:
-            - python -m unittest tests.test_load

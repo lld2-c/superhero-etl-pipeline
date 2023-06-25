@@ -20,11 +20,10 @@ INFO  [alembic.runtime.migration] Running upgrade  -> 706ca6caf601, test
 2023-06-25 10:48:07 root INFO Load completed!
 2023-06-25 10:48:07 root INFO Transform unit test completed
 
-2023-06-25 10:53:36 root INFO Database ready to use. 
-2023-06-25 10:53:36 root ERROR extract_data() missing 1 required positional argument: 'testOrProd'
-2023-06-25 10:55:55 root INFO Database ready to use. 
-2023-06-25 10:55:55 root INFO Extracting started..
-2023-06-25 10:55:59 root INFO Extract completed!
-2023-06-25 10:55:59 root INFO Start transforming..
-2023-06-25 10:55:59 root INFO Transform completed!
-2023-06-25 10:55:59 root INFO Start loading..
+
+2023-06-25 11:47:40 root INFO Database ready to use.
+2023-06-25 11:47:40 root INFO Extracting started..
+2023-06-25 11:47:45 root INFO Extract completed!
+2023-06-25 11:47:45 root INFO Start transforming..
+2023-06-25 11:47:46 root INFO Transform completed!
+2023-06-25 11:47:46 root INFO Start loading..

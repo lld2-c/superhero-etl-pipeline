@@ -5,13 +5,16 @@ import logging
 from typing import Tuple
 
 
-# EXTRACT prep dataframes
 def extract_data(testOrProd: str) -> Tuple[pd.DataFrame, ...]:
     logging.info('Extracting started..')
+
+    # get zip file
     if testOrProd == 'test':
         zf = zipfile.ZipFile('data/test_data.zip') 
     else:
         zf = zipfile.ZipFile('data/marvel-superheroes.zip') 
+
+    # extract from zip file to dataframes
     try:
         characters = pd.read_csv(zf.open('characters.csv'))
         charactersToComics = pd.read_csv(zf.open('charactersToComics.csv'))

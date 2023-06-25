@@ -4,9 +4,10 @@ import module # custom modules
 import logging
 import numpy as np
 from datetime import datetime
+from typing import Tuple
 
 
-def clean_dates(marvel_dc_characters_ms):
+def clean_dates(marvel_dc_characters_ms: pd.DataFrame) -> pd.DataFrame:
     df = marvel_dc_characters_ms
     df['flag'] = [isinstance(x, datetime) for x in df.FirstAppearance]
 
@@ -25,7 +26,7 @@ def clean_dates(marvel_dc_characters_ms):
     concatenated_df.drop('flag', axis=1, inplace=True)
     return concatenated_df
 
-def pre_process(extracted_data):
+def pre_process(extracted_data: Tuple[pd.DataFrame, ...]) -> Tuple[pd.DataFrame, ...]:
     logging.info('Start transforming..')
     try:
         characters, charactersToComics, characters_stats, comics, marvel_characters_info, superheroes_power_matrix, marvel_dc_characters_ms = extracted_data
@@ -74,7 +75,7 @@ def pre_process(extracted_data):
 # to do: - [ ] character_wiki.first_appearance should be in datetime format, enforce alembic schema first
 
 
-def transform_data(extracted_data):
+def transform_data(extracted_data: Tuple[pd.DataFrame, ...]) -> Tuple[str, ...]:
     preprocessed_data = pre_process(extracted_data)
     o_characters,o_charactersToPowers,o_powers,o_character_stats,o_character_wiki, o_charactersToComics,o_comics = preprocessed_data
     character_power = o_characters.merge(o_charactersToPowers, how='left').merge(o_powers, how='left').apply(lambda x: x.astype('string')).to_json(orient = 'records')

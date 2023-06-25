@@ -4,14 +4,13 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
 from sqlalchemy.sql import func
 import json
-
-from sqlalchemy.schema import DropTable
+from typing import Tuple
 from sqlalchemy.ext.compiler import compiles
 import logging
 import module
 
 
-def loadCharactersNPowers(character_power):
+def loadCharactersNPowers(character_power: str):
     # connect database
     connection_string = module.generate_conn_str()
     engine = create_engine(connection_string)
@@ -52,7 +51,7 @@ def loadCharactersNPowers(character_power):
                 session.commit()
     session.close()
 
-def loadCharactersNComics(character_comic):
+def loadCharactersNComics(character_comic: str):
     # connect database
     connection_string = module.generate_conn_str()
     engine = create_engine(connection_string)
@@ -84,7 +83,7 @@ def loadCharactersNComics(character_comic):
                 session.commit()
     session.close()
 
-def loadCharacterStats(character_stats):
+def loadCharacterStats(character_stats: str):
     # connect database
     connection_string = module.generate_conn_str()
     engine = create_engine(connection_string)
@@ -107,7 +106,7 @@ def loadCharacterStats(character_stats):
                 session.commit()
     session.close()
 
-def loadCharacterWiki(character_wiki):
+def loadCharacterWiki(character_wiki: str):
     # connect database
     connection_string = module.generate_conn_str()
     engine = create_engine(connection_string)
@@ -130,7 +129,7 @@ def loadCharacterWiki(character_wiki):
                 session.commit()
     session.close()
 
-def load_data(transformed_data):
+def load_data(transformed_data: Tuple[str, ...]):
     logging.info('Start loading..')
     try:
         character_power, character_stats, character_comic, character_wiki = transformed_data
