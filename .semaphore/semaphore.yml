@@ -25,13 +25,15 @@ blocks:
             - cache store
   - name: Unit test
     task:
+      env_vars:
+        - name: LOAD_ENV
+          value: "source .env"
       prologue:
         commands:
           # Start a MySQL database. On Semaphore, databases run in the same
           # environment as your code.
           # See https://docs.semaphoreci.com/article/32-ubuntu-1804-image#databases-and-services
           # Also https://docs.semaphoreci.com/article/54-toolbox-reference#sem-service
-
           # Start PostgreSQL database.
           - sem-service start postgres 13
           # Install PostgreSQL client.
