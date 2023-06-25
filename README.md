@@ -29,7 +29,7 @@ $ python -m unittest tests.test_load
 ```
 
 STEP 4:
-ready to ingest data<br>
+ready to ingest data (~11mins on MacBook M1) <br>
 
 ```bash
 $ python app.py
