@@ -33,7 +33,7 @@ blocks:
           # Also https://docs.semaphoreci.com/article/54-toolbox-reference#sem-service
 
           # Start PostgreSQL database.
-          - sem-service start postgresql 13
+          - sem-service start postgres 13
           # Install PostgreSQL client.
           - sudo apt-get update && sudo apt-get install -y -qq postgresql-client
           # Create an empty database.
