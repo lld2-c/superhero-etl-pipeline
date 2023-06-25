@@ -29,7 +29,9 @@ INFO  [alembic.runtime.migration] Running upgrade  -> 706ca6caf601, test
 2023-06-25 12:01:03 root INFO Load characters, powers and character_power_association completed!
 2023-06-25 12:47:22 root INFO Load comics and character_comic_association completed!
 2023-06-25 12:48:54 root INFO Load character_stats completed!
-2023-06-25 12:51:22 root INFO Load characters_wiki completed!#1 [internal] load build definition from Dockerfile
+2023-06-25 12:51:22 root INFO Load characters_wiki completed!
+
+#1 [internal] load build definition from Dockerfile
 #1 sha256:0342e06c3bc0f2da27f9ceceb934db852f7d529d49b1ab45f6bf6da03a18f0a4
 #1 transferring dockerfile: 37B done
 #1 DONE 0.0s
